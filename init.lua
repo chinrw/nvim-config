@@ -23,3 +23,14 @@ require("lspconfig").clangd.setup({
     "--ranking-model=heuristics",
   },
 })
+
+local opts = {
+  tools = { -- rust-tools options
+    inlay_hints = {
+      auto = false,
+      only_current_line = false,
+      show_parameter_hints = false,
+    },
+  },
+}
+require("rust-tools").setup(opts)
