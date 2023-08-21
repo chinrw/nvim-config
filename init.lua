@@ -1,25 +1,24 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-local uv = require("luv")
-local cpus = uv.available_parallelism()
+local _, cmp = pcall(require, "cmp")
 
-require("lspconfig").clangd.setup({
-
-  cmd = {
-    "clangd",
-    "--background-index",
-    "--fallback-style=google",
-    "-j=" .. cpus,
-    "--all-scopes-completion",
-    "--pch-storage=memory",
-    "--clang-tidy",
-    "--log=error",
-    "--completion-style=detailed",
-    "--header-insertion=iwyu",
-    "--header-insertion-decorators",
-    "--enable-config",
-    "--offset-encoding=utf-16",
-    "--ranking-model=heuristics",
+-- `:` cmdline setup.
+-- cmp.setup.cmdline(":", {
+--   mapping = cmp.mapping.preset.cmdline(),
+--   sources = cmp.config.sources({
+--     { name = "path" },
+--   }, {
+--     {
+--       name = "cmdline",
+--       option = {
+--         ignore_cmds = { "Man", "!" },
+--       },
+--     },
+--   }),
+-- })
+require("cmp").setup({
+  sources = {
+    { name = "nvim_lsp_signature_help" },
   },
 })

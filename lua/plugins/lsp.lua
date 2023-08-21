@@ -1,8 +1,5 @@
 return {
   {
-    "f-person/git-blame.nvim",
-  },
-  {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
