@@ -4,8 +4,9 @@ require("config.lazy")
 local uv = require("luv")
 local cpus = uv.available_parallelism()
 
-require("lspconfig").clangd.setup({
+-- vim.opt.rtp:append("/usr/share/vim/vimfiles")
 
+require("lspconfig").clangd.setup({
   cmd = {
     "clangd",
     "--background-index",

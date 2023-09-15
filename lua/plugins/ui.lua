@@ -1,4 +1,7 @@
 return {
+  {
+    "lambdalisue/suda.vim",
+  },
   -- noicer ui
   {
     "folke/which-key.nvim",
