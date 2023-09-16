@@ -1,11 +1,10 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-local uv = require("luv")
-local cpus = uv.available_parallelism()
-
 -- vim.opt.rtp:append("/usr/share/vim/vimfiles")
 
+local uv = require("luv")
+local cpus = uv.available_parallelism()
 require("lspconfig").clangd.setup({
   cmd = {
     "clangd",
@@ -24,14 +23,3 @@ require("lspconfig").clangd.setup({
     "--ranking-model=heuristics",
   },
 })
-
-local opts = {
-  tools = { -- rust-tools options
-    inlay_hints = {
-      auto = false,
-      only_current_line = false,
-      show_parameter_hints = false,
-    },
-  },
-}
-require("rust-tools").setup(opts)

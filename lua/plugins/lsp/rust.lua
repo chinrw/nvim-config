@@ -63,6 +63,11 @@ return {
       setup = {
         rust_analyzer = function(_, opts)
           local rust_tools_opts = require("lazyvim.util").opts("rust-tools.nvim")
+          rust_tools_opts.tools.inlay_hints = {
+            auto = false,
+            only_current_line = false,
+            show_parameter_hints = false,
+          }
           require("rust-tools").setup(vim.tbl_deep_extend("force", rust_tools_opts or {}, { server = opts }))
           return true
         end,
