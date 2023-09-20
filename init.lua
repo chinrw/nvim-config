@@ -23,3 +23,14 @@ require("lspconfig").clangd.setup({
     "--ranking-model=heuristics",
   },
 })
+
+
+local user = vim.env.USER
+if user and user == "chin39" then
+  vim.reload_config_on_save = true
+  require("custom_user")
+end
+
+require("mason-lspconfig").setup({
+  ensure_installed = {},
+})
