@@ -2,6 +2,19 @@ return {
   {
     "lambdalisue/suda.vim",
   },
+  --disable mini.pairs
+  { "echasnovski/mini.pairs", enabled = false },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {}, -- this is equalent to setup({}) function
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    opts = {--[[ things you want to change go here]]
+    },
+  },
   -- noicer ui
   {
     "folke/which-key.nvim",

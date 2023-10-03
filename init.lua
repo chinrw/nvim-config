@@ -24,13 +24,14 @@ require("lspconfig").clangd.setup({
   },
 })
 
+require("mason-lspconfig").setup({
+  ensure_installed = {},
+})
+
+vim.cmd(":Copilot disable")
 
 local user = vim.env.USER
 if user and user == "chin39" then
   vim.reload_config_on_save = true
   require("custom_user")
 end
-
-require("mason-lspconfig").setup({
-  ensure_installed = {},
-})

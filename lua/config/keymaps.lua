@@ -124,6 +124,7 @@ map("n", "<leader>gG", function() Util.float_term({ "lazygit" }, {esc_esc = fals
 
 -- quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+map("n", "<leader>qa", "<cmd>qa<cr>", { desc = "Quit all" })
 
 -- highlights under cursor
 map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
@@ -132,11 +133,11 @@ map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
 map("n", "<leader>L", Util.changelog, {desc = "LazyVim Changelog"})
 
 -- floating terminal
-local lazyterm = function() Util.float_term(nil, { cwd = Util.get_root() }) end
-map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
-map("n", "<leader>fT", function() Util.float_term() end, { desc = "Terminal (cwd)" })
-map("n", "<c-\\>", lazyterm, { desc = "Terminal (root dir)" })
-map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
+map("n", "<leader>fT", "<cmd>ToggleTerm direction=float<cr>", { desc = "Terminal (float)" })
+map("n", "<leader>ft", "<cmd>ToggleTerm direction=tab<cr>", { desc = "Terminal (new tab)" })
+map("n", "<C-\\>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (horizontal)" })
+map("n", "<C-/>", "<cmd>ToggleTerm direction=tab<cr>", { desc = "Terminal (tab)", remap = true })
+-- map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
 
 -- Terminal Mappings
 map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
