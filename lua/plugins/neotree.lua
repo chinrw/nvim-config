@@ -19,5 +19,14 @@ return {
       { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
       { "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
     },
+    opts = {
+      window = {
+        position = "left",
+        width = 30,
+        mappings = {
+          ["<space>"] = "none",
+        },
+      },
+    },
   },
 }
