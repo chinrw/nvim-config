@@ -48,6 +48,12 @@ return {
     end,
   },
   {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = {},
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
@@ -58,7 +64,7 @@ return {
       -- add any global capabilities here
       capabilities = {},
       -- Automatically format on save
-      autoformat = false,
+      -- autoformat = false,
     },
   },
   -- Use <tab> for completion and snippets (supertab)

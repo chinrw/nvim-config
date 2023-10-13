@@ -24,11 +24,15 @@ require("lspconfig").clangd.setup({
   },
 })
 
-require("mason-lspconfig").setup({
-  ensure_installed = {},
-})
+-- require("mason-lspconfig").setup({
+--   ensure_installed = {},
+-- })
 
-vim.cmd(":Copilot disable")
+-- vim.cmd(":Copilot disable")
+
+require("lsp_signature").setup({
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+})
 
 local user = vim.env.USER
 if user and user == "chin39" then
