@@ -24,9 +24,9 @@ require("lspconfig").clangd.setup({
   },
 })
 
--- require("mason-lspconfig").setup({
---   ensure_installed = {},
--- })
+require("mason-lspconfig").setup({
+  ensure_installed = {},
+})
 
 -- vim.cmd(":Copilot disable")
 
