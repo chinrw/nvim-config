@@ -28,6 +28,8 @@ require("mason-lspconfig").setup({
   ensure_installed = {},
 })
 
+require("guess-indent").setup()
+
 -- vim.cmd(":Copilot disable")
 
 require("lsp_signature").setup({

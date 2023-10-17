@@ -1,5 +1,8 @@
 return {
   {
+    "nmac427/guess-indent.nvim",
+  },
+  {
     "lambdalisue/suda.vim",
   },
   --disable mini.pairs
