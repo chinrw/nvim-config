@@ -35,7 +35,6 @@ return {
             "-j=" .. cpus,
             "--all-scopes-completion",
             "--pch-storage=memory",
-            "--clang-tidy",
             "--log=error",
             "--completion-style=detailed",
             "--header-insertion=iwyu",
