@@ -35,6 +35,10 @@ require("lsp_signature").setup({
   bind = true, -- This is mandatory, otherwise border config won't get registered.
 })
 
+vim.diagnostic.config({
+  virtual_text = false,
+})
+
 local user = vim.env.USER
 if user and user == "chin39" then
   vim.reload_config_on_save = true
