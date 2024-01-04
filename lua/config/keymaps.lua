@@ -108,7 +108,7 @@ end
 
 -- toggle options
 if vim.lsp.inlay_hint then
-  map("n", "<leader>uh", function() vim.lsp.inlay_hint(0, nil) end, { desc = "Toggle Inlay Hints" })
+  map("n", "<leader>uh", function() if vim.lsp.inlay_hint.is_enabled() then vim.lsp.inlay_hint.enable(0, false) else vim.lsp.inlay_hint.enable(0, true) end end, { desc = "Toggle Inlay Hints" })
 end
 
 -- lazygit
