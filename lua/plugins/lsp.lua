@@ -66,10 +66,10 @@ return {
       -- Automatically format on save
       -- autoformat = false,
       diagnostics = {
-        underline = true,
-        update_in_insert = false,
+        underline = false,
+        update_in_insert = true,
         virtual_text = {
-          spacing = 4,
+          spacing = 2,
           source = "if_many",
           -- this will set set the prefix to a function that returns the diagnostics icon based on the severity
           -- this only works on a recent 0.10.0 build. Will be set to "●" when not supported
