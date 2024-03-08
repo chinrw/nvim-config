@@ -57,10 +57,10 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
-      inlay_hints = {
-        enabled = true,
-        show_parameter_hints = true,
-      },
+      -- inlay_hints = {
+      --   enabled = true,
+      --   show_parameter_hints = true,
+      -- },
       -- add any global capabilities here
       capabilities = {},
       -- Automatically format on save
