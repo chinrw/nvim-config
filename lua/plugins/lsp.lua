@@ -92,4 +92,5 @@ return {
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = true,
   },
+  { "VidocqH/lsp-lens.nvim" },
 }
