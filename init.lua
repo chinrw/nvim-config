@@ -24,6 +24,7 @@ require("lspconfig").clangd.setup({
 })
 
 require("lsp-lens").setup({
+  enable = false,
   sections = {
     definition = function(count)
       return "Def: " .. count
