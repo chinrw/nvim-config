@@ -62,3 +62,5 @@ if user and user == "chin39" then
   vim.reload_config_on_save = true
   require("custom_user")
 end
+
+vim.cmd(':Copilot disable')
