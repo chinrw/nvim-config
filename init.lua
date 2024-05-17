@@ -63,4 +63,4 @@ if user and user == "chin39" then
   require("custom_user")
 end
 
-vim.cmd(':Copilot disable')
+-- vim.cmd(':Copilot disable')
