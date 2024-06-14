@@ -23,6 +23,10 @@ require("config.lazy")
 --   },
 -- })
 
+require("mason-lspconfig").setup({
+  ensure_installed = {},
+})
+
 require("lsp-lens").setup({
   enable = false,
   sections = {
@@ -59,4 +63,4 @@ if user and user == "chin39" then
   require("custom_user")
 end
 
--- vim.cmd(':Copilot disable')
+vim.cmd(":Copilot disable")
