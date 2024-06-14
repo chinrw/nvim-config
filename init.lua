@@ -41,10 +41,6 @@ require("lsp-lens").setup({
   },
 })
 
-require("mason-lspconfig").setup({
-  ensure_installed = {},
-})
-
 require("guess-indent").setup()
 
 -- vim.cmd(":Copilot disable")
