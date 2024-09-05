@@ -93,7 +93,21 @@ return {
         },
       },
       -- Automatically format on save
-      -- autoformat = false,
+      autoformat = false,
+      setup = {
+        clangd = function(_, opts)
+          opts.cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--header-insertion=never",
+            "--completion-style=detailed",
+            "--function-arg-placeholders",
+            "--fallback-style=llvm",
+            "--all-scopes-completion",
+          }
+        end,
+      },
       diagnostics = {
         underline = false,
         update_in_insert = true,

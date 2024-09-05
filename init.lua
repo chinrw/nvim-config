@@ -2,27 +2,6 @@
 require("config.lazy")
 
 -- vim.opt.rtp:append("/usr/share/vim/vimfiles")
-
--- local uv = require("luv")
--- local cpus = uv.available_parallelism()
--- require("lspconfig").clangd.setup({
---   cmd = {
---     "clangd",
---     "--background-index",
---     "--fallback-style=google",
---     "-j=" .. cpus,
---     "--all-scopes-completion",
---     "--pch-storage=memory",
---     "--log=error",
---     "--completion-style=detailed",
---     "--header-insertion=iwyu",
---     "--header-insertion-decorators",
---     "--enable-config",
---     "--offset-encoding=utf-16",
---     "--ranking-model=heuristics",
---   },
--- })
-
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
     vim.highlight.on_yank()
