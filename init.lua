@@ -34,7 +34,7 @@ require("lsp-lens").setup({
   },
 })
 
-require("guess-indent").setup()
+require("guess-indent").setup({})
 
 -- vim.cmd(":Copilot disable")
 
