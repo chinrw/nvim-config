@@ -29,4 +29,14 @@ return {
       },
     },
   },
+  {
+    "hedyhli/outline.nvim",
+    opts = {
+      symbols = {
+        filter = {
+          rust = vim.list_extend(vim.deepcopy(LazyVim.config.kind_filter["default"]), { "Object" }),
+        },
+      },
+    },
+  },
 }
