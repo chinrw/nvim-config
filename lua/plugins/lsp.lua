@@ -96,6 +96,8 @@ return {
       autoformat = false,
       setup = {
         clangd = function(_, opts)
+          local uv = require("luv")
+          local cpus = uv.available_parallelism() or 4 -- Fallback to 4 if not available
           opts.cmd = {
             "clangd",
             "--background-index",
@@ -105,6 +107,7 @@ return {
             "--function-arg-placeholders",
             "--fallback-style=llvm",
             "--all-scopes-completion",
+            "-j=" .. cpus,
           }
         end,
       },
