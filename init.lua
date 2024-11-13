@@ -12,10 +12,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
-require("mason-lspconfig").setup({
-  ensure_installed = {},
-})
-
 require("lsp-lens").setup({
   enable = false,
   sections = {
