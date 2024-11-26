@@ -53,4 +53,4 @@ opt.wrap = true -- line wrap
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 vim.g.lazyvim_python_lsp = "pyright"
-vim.g.lazyvim_python_ruff = "ruff_lsp"
+vim.g.lazyvim_python_ruff = "ruff"
