@@ -7,7 +7,7 @@ local map = vim.keymap.set
 -- floating terminal
 map("n", "<leader>fT", "<cmd>ToggleTerm direction=float<cr>", { desc = "Terminal (float)" })
 map("n", "<leader>ft", "<cmd>ToggleTerm direction=tab<cr>", { desc = "Terminal (new tab)" })
-map("n", "<C-\\>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (horizontal)" })
+map("n", "<C-\\>", "<cmd>ToggleTerm direction=float<cr>", { desc = "Terminal (horizontal)" })
 map("n", "<C-/>", "<cmd>ToggleTerm direction=tab<cr>", { desc = "Terminal (tab)", remap = true })
 
 -- Terminal Mappings
