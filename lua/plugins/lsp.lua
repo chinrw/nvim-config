@@ -1,17 +1,17 @@
 return {
-  {
-    "numToStr/Comment.nvim",
-    opts = {
-      -- add any options here
-      toggler = {
-        ---Line-comment toggle keymap
-        line = "gc",
-        ---Block-comment toggle keymap
-        block = "gb",
-      },
-    },
-    lazy = true,
-  },
+  -- {
+  --   "numToStr/Comment.nvim",
+  --   opts = {
+  --     -- add any options here
+  --     toggler = {
+  --       ---Line-comment toggle keymap
+  --       line = "gc",
+  --       ---Block-comment toggle keymap
+  --       block = "gb",
+  --     },
+  --   },
+  --   lazy = true,
+  -- },
   -- {
   --   "lewis6991/hover.nvim",
   --   config = function()
