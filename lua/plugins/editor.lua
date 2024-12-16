@@ -1,10 +1,10 @@
 return {
   {
-    "nvim-telescope/telescope.nvim",
+    "ibhagwan/fzf-lua",
     keys = {
       -- add a keymap to browse plugin files
       -- stylua: ignore
-    { "<leader>gf", "<cmd>Telescope git_bcommits<CR>", desc = "buffer commits" },
+    { "<leader>gf", "<cmd>FzfLua git_bcommits<CR>", desc = "buffer commits" },
     },
   },
   {
