@@ -7,6 +7,10 @@ vim.g.maplocalleader = "\\"
 -- Disable LazyVim auto format
 vim.g.autoformat = false
 
+-- Snacks animations
+-- Set to `false` to globally disable all snacks animations
+vim.g.snacks_animate = false
+
 -- LazyVim root dir detection
 -- Each entry can be:
 -- * the name of a detector function like `lsp` or `cwd`
