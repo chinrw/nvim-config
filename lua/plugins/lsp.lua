@@ -47,33 +47,15 @@ return {
       require("lsp_signature").setup(opts)
     end,
   },
-  -- {
-  --   "williamboman/mason.nvim",
-  --   opts = {
-  --     ensure_installed = {
-  --       "bash-language-server",
-  --       "clangd",
-  --       "clang-format",
-  --       "cpplint",
-  --       "cpptools",
-  --       "pyright",
-  --       "json-lsp",
-  --       "autopep8",
-  --       "tectonic",
-  --       "ruff-lsp",
-  --       "taplo",
-  --       "yamllint",
-  --       "yaml-language-server",
-  --       "nixpkgs-fmt",
-  --       "markdownlint",
-  --       "markdownlint",
-  --       "stylua",
-  --       "shellcheck",
-  --       "shfmt",
-  --       "flake8",
-  --     },
-  --   },
-  -- },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "flake8",
+        "isort",
+      },
+    },
+  },
   {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
