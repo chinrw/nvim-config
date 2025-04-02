@@ -95,7 +95,7 @@ return {
       },
       diagnostics = {
         underline = false,
-        update_in_insert = true,
+        update_in_insert = false,
         virtual_lines = {
           current_line = false,
         },
