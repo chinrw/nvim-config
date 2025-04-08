@@ -27,10 +27,10 @@ vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 local opt = vim.opt
 
 opt.autowrite = true -- Enable auto write
-opt.clipboard = "unnamedplus" -- Sync with system clipboard
+opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
 
 opt.completeopt = "menu,menuone,noselect"
-opt.conceallevel = 3 -- Hide * markup for bold and italic
+opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.confirm = true -- Conftrueirm to save changes before exiting modified buffer
 opt.cursorline = true -- Enable highlighting of the current line
 opt.expandtab = false -- Use spaces instead of tabs
@@ -43,7 +43,6 @@ opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
 opt.relativenumber = true -- Relative line numbers
 opt.scrolloff = 4 -- Lines of context
-opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp" }
 opt.shiftround = true -- Round indent
 opt.shiftwidth = 4 -- Size of an indent
 opt.shortmess:append({ W = true, I = true, c = true, C = true })
@@ -62,5 +61,5 @@ opt.wrap = true -- line wrap
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
-vim.g.lazyvim_python_lsp = "pyright"
+vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"

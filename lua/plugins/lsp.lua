@@ -73,6 +73,15 @@ return {
         marksman = {
           mason = false,
         },
+        basedpyright = {
+          settings = {
+            basedpyright = {
+              analysis = {
+                typeCheckingMode = "standard",
+              },
+            },
+          },
+        },
       },
       -- Automatically format on save
       autoformat = false,
