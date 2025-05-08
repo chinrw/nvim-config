@@ -48,4 +48,30 @@ if user and user == "chin39" then
   require("custom_user")
 end
 
+-- require("codecompanion").setup({
+--   adapters = {
+--     gemma3 = function()
+--       return require("codecompanion.adapters").extend("ollama", {
+--         name = "gemma3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+--         env = {
+--           url = "https://192.168.0.101:11434",
+--           api_key = "",
+--         },
+--
+--         schema = {
+--           model = {
+--             default = "gemma3:27b",
+--           },
+--           num_ctx = {
+--             default = 16384,
+--           },
+--           num_predict = {
+--             default = -1,
+--           },
+--         },
+--       })
+--     end,
+--   },
+-- })
+--
 -- vim.cmd(":Copilot disable")
