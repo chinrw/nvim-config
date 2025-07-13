@@ -41,19 +41,19 @@ return {
       vim.keymap.set("n", "gS", require("ferris.methods.expand_macro"), { desc = "Expand Macro" })
     end,
   },
-  {
-    "cordx56/rustowl",
-    version = "*", -- Latest stable version
-    lazy = false, -- This plugin is already lazy
-    opts = {
-      client = {
-        on_attach = function(_, buffer)
-          vim.keymap.set("n", "<leader>o", function()
-            require("rustowl").toggle(buffer)
-          end, { buffer = buffer, desc = "Toggle RustOwl" })
-        end,
-      },
-        highlight_style = 'undercurl', -- You can also use 'underline'
-    },
-  },
+  -- {
+  --   "cordx56/rustowl",
+  --   version = "*", -- Latest stable version
+  --   lazy = false, -- This plugin is already lazy
+  --   opts = {
+  --     client = {
+  --       on_attach = function(_, buffer)
+  --         vim.keymap.set("n", "<leader>o", function()
+  --           require("rustowl").toggle(buffer)
+  --         end, { buffer = buffer, desc = "Toggle RustOwl" })
+  --       end,
+  --     },
+  --       highlight_style = 'undercurl', -- You can also use 'underline'
+  --   },
+  -- },
 }
