@@ -6,7 +6,7 @@ return {
     "lambdalisue/suda.vim",
   },
   --disable mini.pairs
-  { "echasnovski/mini.pairs", enabled = false },
+  -- { "echasnovski/mini.pairs", enabled = false },
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
