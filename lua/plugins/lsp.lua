@@ -24,9 +24,11 @@ return {
         enabled = true,
         show_parameter_hints = true,
       },
-      -- add any global capabilities here
-      capabilities = {},
       servers = {
+        -- add any global capabilities here
+        ["*"] = {
+          capabilities = {},
+        },
         clangd = {
           mason = false,
         },
