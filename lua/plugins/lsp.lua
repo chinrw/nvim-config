@@ -35,9 +35,14 @@ return {
         marksman = {
           mason = false,
         },
+        -- Disable basedpyright
         basedpyright = {
+          enabled = false,
+        },
+        -- Use pyrefly instead
+        pyrefly = {
           settings = {
-            basedpyright = {
+            python = {
               analysis = {
                 typeCheckingMode = "standard",
               },
