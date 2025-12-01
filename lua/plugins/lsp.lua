@@ -42,10 +42,8 @@ return {
         -- Use pyrefly instead
         pyrefly = {
           settings = {
-            python = {
-              analysis = {
-                typeCheckingMode = "standard",
-              },
+            pyrefly = {
+              project_includes = { "**/*.py" },
             },
           },
         },
