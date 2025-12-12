@@ -60,7 +60,7 @@ return {
             "--clang-tidy",
             "--header-insertion=never",
             "--completion-style=detailed",
-            "--function-arg-placeholders",
+            "--function-arg-placeholders=true",
             "--fallback-style=llvm",
             "--all-scopes-completion",
             "-j=" .. cpus,
