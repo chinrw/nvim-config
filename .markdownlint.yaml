@@ -1,0 +1,38 @@
+# Global markdownlint rules — applied via nvim-lint (--config)
+# Tuned for Chinese prose + interview notes
+default: true
+
+# Line length — disabled. CJK chars + intentional long bullets in
+# prose notes make any limit fight the writer. Editor soft-wrap handles it.
+MD013: false
+
+# Trailing punctuation in headings — disabled. Question-style headings
+# end in `?` (e.g., `### What is X?`), decorative ones end in `。` or `.`.
+# Notes aren't strict prose; this is noise.
+MD026: false
+
+# Table pipe-spacing style — too pedantic, renderers don't care
+MD060: false
+
+# Emphasis-as-heading — disabled. `**label**` followed by bullets is a
+# deliberate in-section labeling pattern that keeps TOC limited to real
+# headings. Promoting to ####  would clutter the outline.
+MD036: false
+
+# Blanks around lists — disabled. The above pattern (`**label**` directly
+# followed by a list) trips this on every section. Modern renderers (GFM,
+# CommonMark, glow) parse the boundary correctly without the blank line.
+MD032: false
+
+# Blanks around headings/fences/tables — disabled. Q&A drill files use
+# `### question` directly followed by code/text/table as the "answer";
+# the visual pairing is intentional. Modern renderers handle adjacency.
+MD022: false
+MD031: false
+MD058: false
+
+# Fenced-code-language — disabled. Most untagged blocks are program
+# output (kernel oops, top, dmesg), ASCII diagrams, or formulas where no
+# language applies; tagging as `text` just to satisfy the linter adds no
+# value. Re-enable + fix in one pass before publishing.
+MD040: false
