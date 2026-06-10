@@ -63,3 +63,7 @@ opt.wrap = true -- line wrap
 vim.g.markdown_recommended_style = 0
 vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"
+
+-- Node-based tools (prettier, markdownlint, json/yaml/docker LSPs).
+-- "auto" = on only if node is installed | true = always | false = never
+vim.g.enable_node_tools = "auto"
