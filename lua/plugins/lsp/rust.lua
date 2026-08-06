@@ -3,6 +3,11 @@ return {
     "mrcjkb/rustaceanvim",
     opts = {
       server = {
+        settings = function(_, default_settings)
+          return require("codesettings").with_local_settings("rust-analyzer", {
+            settings = default_settings,
+          }).settings
+        end,
         default_settings = {
           -- rust-analyzer language server configuration
           ["rust-analyzer"] = {

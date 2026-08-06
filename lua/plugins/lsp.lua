@@ -1,5 +1,10 @@
 return {
   {
+    "mrjones2014/codesettings.nvim",
+    lazy = false,
+    opts = {},
+  },
+  {
     "ray-x/lsp_signature.nvim",
     event = "VeryLazy",
     opts = {},
