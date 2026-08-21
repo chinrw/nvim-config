@@ -8,6 +8,12 @@ return {
     "lewis6991/gitsigns.nvim",
     event = "LazyFile",
     opts = {
+      current_line_blame = true, -- Toggle GitLens-style inline blame
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = 'eol', -- Display at end of line
+        delay = 400,
+      },
       signs = {
         add = { text = "▎" },
         change = { text = "▎" },
