@@ -38,7 +38,17 @@ return {
           mason = false,
         },
         marksman = {
+          enabled = false,
+        },
+        markdown_oxide = {
           mason = false,
+          capabilities = {
+            workspace = {
+              didChangeWatchedFiles = {
+                dynamicRegistration = true,
+              },
+            },
+          },
         },
         -- Disable basedpyright
         basedpyright = {
